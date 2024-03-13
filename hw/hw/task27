@@ -1,0 +1,413 @@
+public class task1 {
+    public static void main(String[]arg){
+        int num = 5;
+        for ( int i = 1; i <= 10; i ++){
+            System.out.println(num +" * " + i + " = " + (num * i ));
+        }
+    }
+}
+
+
+public class task352 {
+    public static void main(String[]arg){
+        for(int i = 10; i>=1; i --){
+            System.out.println(i);
+        }
+    }
+}
+
+
+public class task353 {
+    public static void main(String[]arg){
+        for (int i = 1; i <=50; i ++){
+            if (i%3==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+
+import java.util.Scanner;
+public class task354 {
+    public static void main(String[]arg){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter a num: ");
+        int divident = scanner.nextInt();
+        System.out.println("enter a num: ");
+        int divisor = scanner.nextInt();
+        int remainder = divident % divisor;
+        System.out.println("the remainder is: "+ remainder);
+        scanner.close();
+    }
+}
+
+
+import java.util.Scanner;
+public class task355 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Проверьте, подключен ли ваш компьютер к интернету (да/нет): ");
+        String response = scanner.nextLine();
+        if (response.equalsIgnoreCase("да")) {
+            System.out.println("Интернет подключен");
+        } else {
+            System.out.println("Нет подключения к интернету");
+        }
+        scanner.close();
+    }
+}
+
+
+public class task356 {
+    public static void main(String[]arg){
+        int minutes = 3;
+        int result = minutes * 60;
+        System.out.println(result);
+    }
+}
+
+public class task357 {
+    public static void main(String[]arg){
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 30;
+        int product = num1 * num2 * num3;
+        System.out.println("The product of " + num1 + ", " + num2 + ", and " + num3 + " is: " + product);
+    }
+}
+
+public class task358 {
+    public static void main(String[]arg){
+        int num1 = 15;
+        int num2 = 3;
+        int product = num1 * num2;
+        if (product < 100) {
+            System.out.println("Less");
+        } else {
+            System.out.println("More");
+        }
+    }
+}
+
+import java.util.Scanner;
+public class task359 {
+    public static void main(String[]arg){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter length: ");
+        int length = scanner.nextInt();
+        System.out.println("enter length: ");
+        int width = scanner.nextInt();
+        int result = length * width;
+        System.out.println(result);
+    }
+}
+
+public class task3510 {
+    public static void main(String[]arg){
+        int sum = 0;
+         for ( int i = 1; i <=5; i ++){
+             sum += i;
+         }
+        System.out.print(sum);
+    }
+}
+
+
+public class task3511 {
+    public static void main(String[]arg){
+        int monthNumber = 3;
+        String monthName;
+        switch (monthNumber) {
+            case 1:
+                monthName = "January";
+                break;
+            case 2:
+                monthName = "February";
+                break;
+            case 3:
+                monthName = "March";
+                break;
+            case 4:
+                monthName = "April";
+                break;
+            case 5:
+                monthName = "May";
+                break;
+            case 6:
+                monthName = "June";
+                break;
+            case 7:
+                monthName = "July";
+                break;
+            case 8:
+                monthName = "August";
+                break;
+            case 9:
+                monthName = "September";
+                break;
+            case 10:
+                monthName = "October";
+                break;
+            case 11:
+                monthName = "November";
+                break;
+            case 12:
+                monthName = "December";
+                break;
+            default:
+                monthName = "Invalid month number";
+                break;
+        }
+        System.out.println("The current month is: " + monthName);
+    }
+}
+
+
+public class task3512 {
+    public static void main(String[]arg){
+        for (int i = 10; i>=-10; i --){
+            System.out.println(i);
+        }
+    }
+}
+
+
+public class task3513 {
+    public static void main(String[]arg){
+        int num1 = 20;
+        int num2 = 4;
+        int product = num1 * num2;
+        int divisor = num1/num2;
+        System.out.println(product);
+        System.out.println(divisor);
+    }
+}
+
+
+public class task3514 {
+    public static void main(String[]arg){
+        int num = 5;
+        for ( int i = 1; i <= 10; i ++){
+            System.out.println(num +" * " + i + " = " + (num * i ));
+        }
+    }
+}
+
+
+
+import java.util.Arrays;
+public class task3515 {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        System.out.println("Original array: " + Arrays.toString(array));
+        if (array.length >= 2) {
+            int temp = array[0];
+            array[0] = array[array.length - 1];
+            array[array.length - 1] = temp;
+            System.out.println("Array after swapping first and last elements: " + Arrays.toString(array));
+        } else {
+            System.out.println("Array has less than two elements. Cannot swap.");
+        }
+    }
+}
+
+public class task3516 {
+    public static void main(String[] args) {
+        String originalString = "broken";
+        String reversedString = "";
+        for (int i = originalString.length() - 1; i >= 0; i--) {
+            reversedString += originalString.charAt(i);
+        }
+        System.out.println("Original string: " + originalString);
+        System.out.println("Reversed string: " + reversedString);
+    }
+}
+
+
+public class task3517 {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(numbers.length);
+    }
+}
+
+
+public class task3518 {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        int target = 10;
+        int index = -1;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == target) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
+            System.out.println(index);
+        } else {
+            System.out.println("not found");
+        }
+    }
+}
+
+
+public class task3519 {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+import java.util.Arrays;
+public class task3520 {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        System.out.println("first version: " + Arrays.toString(array));
+        if (array.length >= 2) {
+            int temp = array[0];
+            array[0] = array[array.length - 1];
+            array[array.length - 1] = temp;
+        }
+        System.out.println("second version: " + Arrays.toString(array));
+    }
+}
+
+
+public class task3521 {
+    public static void main(String[]arg){
+        String[]array = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(array[1]);
+        System.out.println(array[3]);
+    }
+}
+
+
+public class task3522 {
+    public static void main(String[]arg){
+        String[]array = {"Kazakh", "english", "russian"};
+        int length = array.length;
+        System.out.println(length);
+    }
+}
+
+
+public class task3523 {
+    public static void main(String[]arg){
+        String[]array = {"FIT", "ASF", "UAK"};
+        System.out.println(array[2]);
+    }
+}
+
+
+public class task3524 {
+    private String имя;
+    private String вакансия;
+    private String электроннаяПочта;
+    private double зарплата;
+    public task3524(String имя, String вакансия, String электроннаяПочта, double зарплата) {
+        this.имя = имя;
+        this.вакансия = вакансия;
+        this.электроннаяПочта = электроннаяПочта;
+        this.зарплата = зарплата;
+    }
+    public String получитьИмя() {
+        return имя;
+    }
+    public void установитьИмя(String имя) {
+        this.имя = имя;
+    }
+    public String получитьВакансию() {
+        return вакансия;
+    }
+    public void установитьВакансию(String вакансия) {
+        this.вакансия = вакансия;
+    }
+    public String получитьЭлектроннуюПочту() {
+        return электроннаяПочта;
+    }
+    public void установитьЭлектроннуюПочту(String электроннаяПочта) {
+        this.электроннаяПочта = электроннаяПочта;
+    }
+    public double получитьЗарплату() {
+        return зарплата;
+    }
+    public void установитьЗарплату(double зарплата) {
+        this.зарплата = зарплата;
+    }
+    public static void main(String[] args) {
+        task3524 employer = new task3524("Aruzhan", "broken", "aruzanbekenova764@gmail.com", 50000);
+        System.out.println("Имя: " + employer.получитьИмя());
+        System.out.println("Вакансия: " + employer.получитьВакансию());
+        System.out.println("Электронная почта: " + employer.получитьЭлектроннуюПочту());
+        System.out.println("Зарплата: " + employer.получитьЗарплату());
+    }
+}
+
+
+import java.util.ArrayList;
+public class task3525 {
+    public static void main(String[] args) {
+        Student student1 = new Student("Aruzhan", 19, "001");
+        student1.addSubject("Mathematics");
+        student1.addSubject("Physics");
+        student1.displayInfo();
+    }
+}
+class Student {
+    private String name;
+    private int age;
+    private String studentID;
+    private ArrayList<String> subjects;
+    public Student(String name, int age, String studentID) {
+        this.name = name;
+        this.age = age;
+        this.studentID = studentID;
+        this.subjects = new ArrayList<>();
+    }
+    public void addSubject(String subject) {
+        subjects.add(subject);
+    }
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Student ID: " + studentID);
+        System.out.println("Subjects: " + subjects);
+    }
+}
+
+
+public class task3527 {
+    public static void main(String[] args) {
+        Task task = new Task("Complete homework", false);
+        task.printTaskDetails();
+    }
+}
+class Task {
+    String description;
+    boolean status;
+    public Task(String description, boolean status) {
+        this.description = description;
+        this.status = status;
+    }
+    public void printTaskDetails() {
+        System.out.println("Task Description: " + description);
+        System.out.println("Task Status: " + (status ? "Complete" : "Incomplete"));
+    }
+}
+
+
+public class task3528 {
+    public static void main(String[] args) {
+        HelloWorld hello = new HelloWorld();
+        hello.sayHello();
+    }
+}
+class HelloWorld {
+    public void sayHello() {
+        System.out.println("Hello, world!");
+    }
+}
