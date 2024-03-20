@@ -1,0 +1,143 @@
+import java.util.Scanner;
+public class week111 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int h = scanner.nextInt();
+        int w = scanner.nextInt();
+        int q = scanner.nextInt();
+        int s = scanner.nextInt();
+        int p = scanner.nextInt();
+        int k = scanner.nextInt();
+        int roomSurfaceArea = 2 * (a * h + b * h) - (w * q) - (s * p);
+        int paintCans = (int) Math.ceil((double) roomSurfaceArea / k);
+        System.out.println(paintCans);
+        scanner.close();
+    }
+}
+
+
+import java.util.Scanner;
+public class week112 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int L = scanner.nextInt();
+        int M = scanner.nextInt();
+        int N = scanner.nextInt();
+        double maxDiscount = -1;
+        int fridgeIndex = -1, microwaveIndex = -1, tvIndex = -1;
+        for (int i = 0; i < L; i++) {
+            int price = scanner.nextInt();
+            int discount = scanner.nextInt();
+            double discountedPrice = price * (100 - discount) / 100.0;
+            if (discountedPrice > maxDiscount) {
+                maxDiscount = discountedPrice;
+                fridgeIndex = i + 1;
+            }
+        }
+        for (int i = 0; i < M; i++) {
+            int price = scanner.nextInt();
+            int discount = scanner.nextInt();
+            double discountedPrice = price * (100 - discount) / 100.0;
+            if (discountedPrice > maxDiscount) {
+                maxDiscount = discountedPrice;
+                fridgeIndex = -1;
+                microwaveIndex = i + 1;
+            }
+        }
+        for (int i = 0; i < N; i++) {
+            int price = scanner.nextInt();
+            int discount = scanner.nextInt();
+            double discountedPrice = price * (100 - discount) / 100.0;
+            if (discountedPrice > maxDiscount) {
+                maxDiscount = discountedPrice;
+                fridgeIndex = -1;
+                microwaveIndex = -1;
+                tvIndex = i + 1;
+            }
+        }
+        System.out.println(fridgeIndex + " " + microwaveIndex + " " + tvIndex);
+        scanner.close();
+    }
+}
+
+
+public class week113 {
+    public static double func(double x) {
+        return Math.cos(Math.pow(x, 5)) + Math.pow(x, 4) - 345.3 * x - 23;
+    }
+    public static double solve(double start, double end) {
+        while (end - start > 0.001) {
+            double x = (start + end) / 2;
+            if (func(start) * func(x) > 0) {
+                start = x;
+            } else {
+                end = x;
+            }
+        }
+        return start;
+    }
+    public static void main(String[] args) {
+        System.out.println(solve(0, 10));
+    }
+}
+
+
+
+
+public class week114 {
+    public static void main(String[] args) {
+        String text = "Этот текст содержит несколько букв русского алфавита для построения частотного словаря.";
+        buildDictionary(text);
+    }
+    static void buildDictionary(String text) {
+        text = text.toLowerCase();
+        int[] result = new int[33];
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+            if (ch >= 'а' && ch <= 'я') {
+                result[ch - 'а']++;
+            } else if (ch == 'ё') {
+                result[32]++;
+            }
+        }
+        for (char ch = 'а'; ch <= 'я'; ch++) {
+            System.out.println(ch + " = " + result[ch - 'а']);
+        }
+        System.out.println("ё = " + result[32]);
+    }
+}
+
+
+
+
+import java.util.Arrays;
+import java.util.function.Function;
+public class week115 {
+    public static <T> T[] filter(T[] array, Function<? super T, Boolean> filter) {
+        int newSize = 0;
+        for (T element : array) {
+            if (filter.apply(element)) {
+                newSize++;
+            }
+        }
+        @SuppressWarnings("unchecked")
+        T[] result = (T[]) new Object[newSize];
+        int index = 0;
+        for (T element : array) {
+            if (filter.apply(element)) {
+                result[index++] = element;
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        String array[] = new String[]{"1rewf ", "feefewf", "a", null, "1"};
+
+        String[] newArray = filter(array, s -> s != null);
+        System.out.println(Arrays.toString(newArray));
+    }
+}
+
+
